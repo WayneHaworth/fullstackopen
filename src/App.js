@@ -1,3 +1,8 @@
+/*
+Comment from PC, confirming git setup
+
+*/
+
 const Header = (props) => {
   return (
     <h1>{props.course.name}</h1>
