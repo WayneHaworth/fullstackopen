@@ -1,6 +1,6 @@
 /*
 Comment from PC, confirming git setup
-
+Commect from Mac, confirming git setup
 */
 
 const Header = (props) => {
