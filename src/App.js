@@ -1,22 +1,20 @@
 import { useState } from "react";
 
-
-
 const App = () => {
 
-  const [left, setLeft] = useState(0)
-  const [right, setRight] = useState(0)
+  const person = {
+    name: "wayne",
+    age: 42
+  }
+
+var thing = {...person, age: person.age -10}
+
+person.name = "sharon"
+console.log(person.name)
+console.log(thing.name)
 
   return (
     <div>
-      {left}:
-      <button onClick={() => setLeft(left + 1)}>
-        Left
-      </button>
-      {right}: 
-      <button onClick={() => setRight(right + 1)}>
-        Right
-      </button>
     </div>
   )
 }
