@@ -1,22 +1,21 @@
 import { useState } from "react";
 
+const Button = ({ buttonHandle }) => <button onClick={buttonHandle}>Reset value</button>;
+
+
 const App = () => {
+  const [value, setValue] = useState(100);
 
-  const person = {
-    name: "wayne",
-    age: 42
-  }
-
-var thing = {...person, age: person.age -10}
-
-person.name = "sharon"
-console.log(person.name)
-console.log(thing.name)
+  const increaseValue = () => {
+    setValue(0);
+  };
 
   return (
     <div>
+      {value}
+      <Button buttonHandle={increaseValue} />
     </div>
-  )
-}
+  );
+};
 
 export default App;
