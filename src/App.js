@@ -8,20 +8,21 @@ const App = () => {
  
   const handleSubmit = (event) => {
     event.preventDefault();
-    const nameObject = {
-      name: newName
+    if (persons.every(person => person.name !== newName)) {
+      const nameObject = { name: newName }
+      setPersons(persons.concat(nameObject))
+      setNewName('')
     }
-
-    setPersons(persons.concat(nameObject))
-    setNewName('')
+    else {
+      console.log(`${newName} already exists`)
+      alert(`${newName} already exists`)
+    }
   }
 
   const handleNameChange = (event) => {
-    console.log(event.target.value)
     setNewName(event.target.value)
   }
-
-
+  
   return (
     <div>
       <h2>Phonebook</h2>
