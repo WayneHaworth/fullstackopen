@@ -43,10 +43,12 @@ const App = () => {
 
   return (
     <div>
+      <h2>Phonebook</h2>
       <SearchFilter value={filterText} onChange={handleFilterText}/>
+      <h2>Add a new</h2>
       <AddNew handleSubmit={handleSubmit} newName={newName} newNumber={newNumber} nameChange={handleNameChange} numberChange={handleNumberChange}/>
-      <RenderContacts persons={persons} filterText={filterText}/>
-      
+      <h2>Numbers</h2>
+      <RenderContacts persons={persons} filterText={filterText}/>      
 
       {/* <div>debug: {filterText}</div> */}
     </div>

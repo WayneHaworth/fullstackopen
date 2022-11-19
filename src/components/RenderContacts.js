@@ -1,7 +1,5 @@
 const RenderContacts = ({persons, filterText}) => {
     return (
-      <div>
-        <h2>Numbers</h2>
         <div>
           {
             persons
@@ -9,7 +7,6 @@ const RenderContacts = ({persons, filterText}) => {
               .map( person => <RenderContact key={person.name} personName={person.name} personNumber={person.number}/>)
           }
         </div>
-      </div>
     )
   }
 
